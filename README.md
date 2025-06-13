@@ -415,4 +415,7 @@ You should see that the tests have passed successfully.
 > So, we've looked at how you can use a combination of Mocha, Chai, and Sinon to create a robust test for your Node application.
 
 > [!IMPORTANT]
-> Be sure to check out their documentation to expand your knowledge of these tools.
+> Be sure to check out their documentation to expand your knowledge of these tools
+
+> [!TIP]
+> The full code for this article can be found on [CodeSandbox](https://codesandbox.io/s/github/GodwinEkuma/mocha-chai-unit-test).
