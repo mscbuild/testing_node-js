@@ -1,4 +1,12 @@
 # Testing Node.js with Mocha, Chai and Sinon
+ ![](https://komarev.com/ghpvc/?username=mscbuild) 
+ ![](https://img.shields.io/github/license/mscbuild/testing_node-js) 
+ ![](https://img.shields.io/github/repo-size/mscbuild/testing_node-js)
+![](https://img.shields.io/badge/PRs-Welcome-green)
+![](https://img.shields.io/badge/code%20style-json-green)
+![](https://img.shields.io/github/stars/mscbuild)
+![](https://img.shields.io/badge/Topic-Github-lighred)
+![](https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Fmscbuild)
 
 Tests help document the core functionality of an application. Well-written tests ensure that new features do not introduce changes that could break the application.
 
@@ -419,3 +427,8 @@ You should see that the tests have passed successfully.
 
 > [!TIP]
 > The full code for this article can be found on [CodeSandbox](https://codesandbox.io/s/github/GodwinEkuma/mocha-chai-unit-test).
+
+### 📝 License
+
+This project is licensed under the `MIT License` - see the LICENSE file for details.
+
