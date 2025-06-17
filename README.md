@@ -1,7 +1,7 @@
 # Testing Node.js with Mocha, Chai and Sinon
  ![](https://komarev.com/ghpvc/?username=mscbuild) 
  ![](https://img.shields.io/github/license/mscbuild/e-learning) 
-![]( https://img.shields.io/github/directory-file-count/:user/:repo)
+![]( https://img.shields.io/github/languages/code-size/mscbuild/testing_node-js)
 ![](https://img.shields.io/badge/PRs-Welcome-green)
 ![](https://img.shields.io/badge/code%20style-json-green)
 ![](https://img.shields.io/github/stars/mscbuild)
