@@ -33,6 +33,7 @@ mkdir mocha-unit-test && cd mocha-unit-test
 mkdir src
 ~~~
 Create a package.json file in the src folder and add the following code to it:
+
 ~~~ruby
 // src/package.json
 {
