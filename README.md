@@ -28,12 +28,12 @@ Unit tests verify that functions work as expected while being isolated from othe
 
 Let's create a new directory for our user application project:
 
-~~~bash
+~~~ruby
 mkdir mocha-unit-test && cd mocha-unit-test
 mkdir src
 ~~~
 Create a package.json file in the src folder and add the following code to it:
-~~~bash
+~~~ruby
 // src/package.json
 {
   "name": "mocha-unit-test",
@@ -89,7 +89,7 @@ Splitting the application in this way makes testing easier.
 # UserRepository class
 
 Let's start by creating a repository class:
-~~~bash
+~~~ruby
 // src/user/user.repository.js
 const { UserModel } = require("../database");
 class UserRepository {
@@ -112,7 +112,7 @@ module.exports = UserRepository;
 The `UserRepository` class has two methods: `create` and `getUser`. The `create` method adds a new user to the database, and the `getUser` method looks up a user in the database.
 
 Let's test the `userRepository` methods below:
-~~~bash
+~~~ruby
 // src/user/user.repository.test.js
 const chai = require("chai");
 const sinon = require("sinon");
@@ -144,7 +144,7 @@ describe("UserRepository", function() {
 });
 ~~~
 In the code above, we test the create method of the `UserRepository` class. Note that we use a stub for the `UserModel`.create method. The stub is necessary because our goal is to test the repository, not the model. The faker library is used for test data.
-~~~bash
+~~~ruby
 // src/user/user.repository.test.js
 
 const chai = require("chai");
@@ -180,7 +180,7 @@ describe("UserRepository", function() {
 To test the `getUser` method, we also need to stub the `UserModel.findOne` method. We use `expect(stub.calledOnce).to.be.true` to assert that the stub was called at least once. The remaining assertions check that the value returned by the `getUser` method is correct.
 
 ***UserService class***
-~~~bash
+~~~ruby
 // src/user/user.service.js
 
 const UserRepository = require("./user.repository");
@@ -200,7 +200,7 @@ module.exports = UserService;
 The `UserService` class also has two methods: `create` and `getUser`. The `create` method calls the repository's `create` method, passing the name and email of the new user as arguments. The getUser method calls the repository's `getUser` method.
 
 Let's test the `userService` methods below:
-~~~bash
+~~~ruby
 // src/user/user.service.test.js
 
 const chai = require("chai");
@@ -245,7 +245,7 @@ describe("UserService", function() {
 });
 ~~~
 In the code above, we test the `create` method of the `UserService` service. We `create` a stub for the create method of the repository. The code below tests the `getUser` method of the service:
-~~~bash
+~~~ruby
 const chai = require("chai");
 const sinon = require("sinon");
 const UserRepository = require("./user.repository");
@@ -279,7 +279,7 @@ describe("UserService", function() {
 Here we again use the stub for the `getUser` method of the `UserRepository`. We also check that the stub was called at least once and that the returned value is correct.
 
 ***UserController class***
-~~~bash
+~~~ruby
 / src/user/user.controller.js
 
 class UserController {
@@ -313,7 +313,7 @@ class UserController {
 module.exports = UserController;
 ~~~
 The `UserController` class has two methods: register and `getUser`. Each of these methods takes two parameters: the `req` and `res` objects.
-~~~bash
+~~~ruby
 // src/user/user.controller.test.js
 
 describe("UserController", function() {
@@ -375,7 +375,7 @@ describe("UserController", function() {
 });
 ~~~
 In the first three `it` blocks, we test that the user will not be created if one or both of the required parameters (email and name) are not passed. Note that we use a stub for `res.status` and set a spy on `res.json`:
-~~~bash
+~~~ruby
 describe("UserController", function() {
   describe("getUser", function() {
     let req;
@@ -414,7 +414,7 @@ To test the `getUser` method, we mocked the `json` method. Note that we also had
 # Conclusion
 
 Run the tests using the command below:
-~~~bash
+~~~ruby
 npm test
 ~~~
 You should see that the tests have passed successfully.
